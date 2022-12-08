@@ -6,6 +6,8 @@ const buttonElement = document.getElementById("submit-button")
 console.log(buttonElement)
 const ulElement = document.getElementById("todo-list")
 console.log(ulElement)
+const resetElement = document.getElementById("reset-button")
+
 
 buttonElement.addEventListener("click", function(){
     if (inputElement.value.trim() === ""){
@@ -19,6 +21,14 @@ buttonElement.addEventListener("click", function(){
 })
 
 
+resetElement.addEventListener("click", function(){
+    ulElement.innerHTML = "";
+})
 
 
+ulElement.addEventListener("click", handleClick)
+
+function handleClick(evt){
+    evt.target.remove()
+}
 
