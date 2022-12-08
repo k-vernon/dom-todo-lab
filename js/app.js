@@ -8,6 +8,9 @@ const ulElement = document.getElementById("todo-list")
 console.log(ulElement)
 
 buttonElement.addEventListener("click", function(){
+    if (inputElement.value.trim() === ""){
+        return;
+    }
     const li = document.createElement("li")
     console.log(li)
     li.textContent = inputElement.value
